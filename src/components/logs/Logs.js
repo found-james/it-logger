@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import LogItem from "./LogItem";
+import Preloader from "../layout/Preloader";
 
 export default function Logs() {
     const [logs, setLogs] = useState([]);
@@ -23,11 +24,8 @@ export default function Logs() {
 
 
     if (loading) {
-        return <h4>loading</h4>
+        return <Preloader />
     }
-
-    
-
 
   return (
     <ul className="collection with-header">
